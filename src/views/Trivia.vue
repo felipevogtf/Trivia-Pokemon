@@ -1,29 +1,35 @@
 <template>
-  <v-container>
-    <v-row align="center">
-      <v-col class="d-flex justify-start"
-        ><v-btn icon color="black" @click="close()">
-          <v-icon>mdi-close</v-icon>
-        </v-btn></v-col
-      >
-      <v-col class="d-flex justify-center"
-        ><v-chip class="ma-2">
-          <v-avatar left class="darken-4"> {{ correct }} </v-avatar>
-          <v-icon>mdi-check</v-icon>
-        </v-chip></v-col
-      >
-      <v-col class="d-flex justify-end"
-        ><div class="text-button" style="font-size: 1rem !important">
-          {{ seconds | moment("mm:ss") }}
-        </div></v-col
-      >
+  <v-container class="mt-7">
+    <v-row justify="center">
+      <v-col cols="12" md="8">
+        <v-card class="rounded-xl" elevation="24">
+          <v-row align="center" class="mr-4 ml-4">
+            <v-col class="d-flex justify-start"
+              ><v-btn icon class="secondary-button-icon" @click="close()">
+                <v-icon>mdi-close</v-icon>
+              </v-btn></v-col
+            >
+            <v-col class="d-flex justify-center"
+              ><v-chip class="ma-2" color="teal darken-1" style="color: white !important">
+                <v-avatar left class="darken-4"> {{ correct }} </v-avatar>
+                <v-icon>mdi-check</v-icon>
+              </v-chip></v-col
+            >
+            <v-col class="d-flex justify-end"
+              ><div class="text-button secondary-button-icon" style="font-size: 1rem !important">
+                {{ seconds | moment("mm:ss") }}
+              </div></v-col
+            >
+          </v-row>
+          <PreguntaComponent :text="currentPregunta"></PreguntaComponent>
+          <AlternativasComponent
+            :alternativas="currentAlternativas"
+            :respuesta="currentRespuesta"
+            @answer="checkAnswer"
+          ></AlternativasComponent>
+        </v-card>
+      </v-col>
     </v-row>
-    <PreguntaComponent :text="currentPregunta"></PreguntaComponent>
-    <AlternativasComponent
-      :alternativas="currentAlternativas"
-      :respuesta="currentRespuesta"
-      @answer="checkAnswer"
-    ></AlternativasComponent>
   </v-container>
 </template>
 

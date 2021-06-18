@@ -1,7 +1,7 @@
 <template>
   <div>
-    <v-btn depressed @click="googleSignIn" x-large dark
-      >Sign In with Google</v-btn
+    <v-btn class="primary-button" depressed @click="googleSignIn" x-large dark
+      >Ingresa con Google</v-btn
     >
   </div>
 </template>

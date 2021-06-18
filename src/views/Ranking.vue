@@ -1,23 +1,30 @@
 <template>
   <v-container class="mt-4">
-    <v-row>
-      <v-col cols="12">
+    <v-row justify="center">
+      <v-col cols="12" md="8">
         <v-card
-          class="pb-8 pr-8 text-center text-button"
+          class="pb-8 pr-8 text-center text-button rounded-xl"
+          elevation="24"
           style="font-size: 2rem !important"
         >
           <v-card-actions>
-            <v-btn text @click="close()">Regresar </v-btn>
+            <v-btn
+              class="ml-4 mt-2 secondary-button-icon"
+              icon
+              @click="close()"
+            >
+              <v-icon>mdi-chevron-left</v-icon>
+            </v-btn>
           </v-card-actions>
-          Top 10</v-card
+         Ranking</v-card
         >
       </v-col>
-      <v-col cols="12">
-        <v-card class="pa-8">
+      <v-col cols="12" md="8">
+        <v-card class="pa-8 rounded-xl" elevation="24">
           <div class="text-center" v-if="ranking.length == 0">
             <v-progress-circular
               :size="100"
-              color="primary"
+              color="teal"
               indeterminate
             ></v-progress-circular>
           </div>
@@ -39,7 +46,7 @@
               </v-list-item-content>
 
               <v-list-item-action class="d-flex justify-center">
-                <div class="text-button">
+                <div class="text-button" style="font-size: 1rem !important">
                   {{ index + 1 }}
                 </div>
               </v-list-item-action>

@@ -1,8 +1,8 @@
 <template>
   <v-container class="mt-4">
-    <v-row>
-      <v-col>
-        <v-card class="pl-8 pt-8 pr-8">
+    <v-row justify="center">
+      <v-col cols="12" md="8">
+        <v-card class="pl-8 pt-8 pr-8 rounded-xl" elevation="24">
           <v-row>
             <v-col
               class="text-center text-button"
@@ -22,18 +22,20 @@
               Puntaje total: {{ $route.params.score }}</v-col
             >
           </v-row>
-          <v-card-actions>
-            <v-btn
-              depressed
-              block
-              dark
-              color="black"
-              :loading="postData == false"
-              @click="close()"
-            >
-              Volver al menu
-            </v-btn>
-          </v-card-actions>
+          <v-row justify="center">
+            <v-col cols="12" md="4">
+              <v-btn
+                depressed
+                dark
+                block
+                class="primary-button"
+                :loading="postData == false"
+                @click="close()"
+              >
+                Volver al menu
+              </v-btn>
+            </v-col>
+          </v-row>
         </v-card>
       </v-col>
     </v-row>

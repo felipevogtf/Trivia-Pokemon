@@ -1,9 +1,12 @@
 <template>
   <v-row>
-    <v-col sm="12">
-      <v-card class="pa-12">
-        <div class="text-h4 text-center">{{ text }}</div>
-      </v-card>
+    <v-col>
+      <div
+        class="text-button text-center pa-12"
+        style="font-size: 2rem !important"
+      >
+        {{ text }}
+      </div>
     </v-col>
   </v-row>
 </template>

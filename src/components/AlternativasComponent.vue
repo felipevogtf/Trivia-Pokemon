@@ -1,5 +1,5 @@
 <template>
-  <v-row>
+  <v-row class="pa-8">
     <v-col
       v-for="(alternativa, index) in alternativas"
       :key="index"
@@ -9,16 +9,17 @@
       <v-btn
         @click="sendAnswer(alternativa.id)"
         block
+        depressed
         x-large
         dark
         v-bind:class="[
           !answered
-            ? 'primary'
+            ? 'secondary-button'
             : isCorrect(alternativa.id)
-            ? 'green darken-2'
-            : 'red',
+            ? 'primary-button darken-2'
+            : 'secondary-button-light',
         ]"
-        class="pa-12 text-h5"
+        class="pa-12 text-h6"
         >{{ alternativa.text }}
       </v-btn>
     </v-col>

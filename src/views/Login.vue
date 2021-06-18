@@ -1,8 +1,8 @@
 <template>
   <v-container class="mt-4">
     <v-row justify="center" align="center">
-      <v-col cols="8" md="4">
-        <v-card class="pa-8">
+      <v-col cols="12" md="4">
+        <v-card class="pa-8 rounded-xl" elevation="24">
           <v-row>
             <v-col class="text-center">
               <v-avatar size="100">
@@ -11,6 +11,13 @@
                   alt="John"
                 />
               </v-avatar>
+            </v-col>
+          </v-row>
+          <v-row justify="center">
+            <v-col cols="6">
+              <div class="text-overline text-center">
+                Ingresa con google para empezar a jugar
+              </div>
             </v-col>
           </v-row>
           <v-row>
