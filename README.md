@@ -1,5 +1,7 @@
-# trivia-pokemon
+# Trivia Pokemon
+
 [Demonstration](https://cuanto-sabes-de-pokemon.web.app/login)
+
 ## Project setup
 ```
 npm install
