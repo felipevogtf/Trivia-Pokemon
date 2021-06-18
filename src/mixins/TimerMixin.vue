@@ -4,6 +4,7 @@ import Vue from 'vue'
 export default {
   data() {
     return {
+      totalSeconds: 300,
       seconds: 300,
       endFunction: '',
     };
@@ -21,6 +22,9 @@ export default {
       Vue.prototype.$interval = setInterval(() => {
         this.count();
       }, 1000);
+    },
+    getTime(){
+      return this.totalSeconds - this.seconds;
     },
     stop() {
       clearInterval(this.$interval);

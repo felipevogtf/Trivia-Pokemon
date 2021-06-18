@@ -89,7 +89,7 @@ export default {
         name: "Score",
         params: {
           correctas: this.correct,
-          tiempo: this.seconds,
+          tiempo: this.getTime(),
           score: this.totalScore,
         },
       });
