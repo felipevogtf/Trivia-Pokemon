@@ -19,7 +19,7 @@
             ? 'primary-button darken-2'
             : 'secondary-button-light',
         ]"
-        class="pa-12 text-h6"
+        class="pa-12 text-md-subtitle-1"
         >{{ alternativa.text }}
       </v-btn>
     </v-col>

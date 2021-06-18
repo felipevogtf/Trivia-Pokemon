@@ -3,7 +3,7 @@
     <v-col>
       <div
         class="text-button text-center pa-12"
-        style="font-size: 2rem !important"
+        style="font-size: 1.5rem !important"
       >
         {{ text }}
       </div>
