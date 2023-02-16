@@ -1,6 +1,6 @@
 # Trivia Pokemon
 
-[Demonstration](https://cuanto-sabes-de-pokemon.web.app/login)
+[Demon](https://cuanto-sabes-de-pokemon.web.app/login)
 
 ## Project setup
 ```
